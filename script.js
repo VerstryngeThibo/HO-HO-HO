@@ -13,12 +13,3 @@ function playNextVideo(currentVideo, nextVideo) {
 // Eventlisteners voor het einde van elke video
 video1.addEventListener("ended", () => playNextVideo(video1, bartVideo));
 bartVideo.addEventListener("ended", () => playNextVideo(bartVideo, video2));
-
-function playNextVideo(currentVideo, nextVideo) {
-    currentVideo.classList.add("hidden");
-    nextVideo.classList.remove("hidden");
-    if (nextVideo.requestFullscreen) {
-        nextVideo.requestFullscreen();
-    }
-    nextVideo.play();
-}
